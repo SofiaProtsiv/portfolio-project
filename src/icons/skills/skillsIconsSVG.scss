@@ -1,0 +1,15 @@
+@import "../../index.scss";
+
+.bi {
+  &-server,
+  &-braces {
+    width: 2rem;
+    height: 2rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+  }
+  &-chevron-down {
+    margin-left: auto;
+    transition: 0.3s;
+  }
+}

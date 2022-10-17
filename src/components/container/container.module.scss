@@ -1,0 +1,35 @@
+@import "../../global-styles/mixins.scss";
+@import "../../global-styles/fonts.scss";
+@import "../../global-styles/colors.scss";
+
+.content_wr {
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+  z-index: 2;
+
+  @include onMobile {
+    min-width: $mobile-width;
+    padding: 0 50px;
+  }
+  @include onTablet {
+    width: $tablet-width;
+    padding: 0 75px;
+  }
+  @include onLaptop {
+    width: $laptop-width;
+    padding: 0 71px;
+  }
+  @include onDesktop {
+    width: $desktop-width;
+    padding: 0 71px;
+  }
+}
+
+.container {
+  padding: 30px 0;
+
+  @include onTablet {
+    padding: 50px 0;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../index.scss";
+
+.bi {
+  &-linkedin,
+  &-github,
+  &-instagram,
+  &-send,
+  &-arrow-down-short {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  &-mouse2 {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.bg-image__icon {
+  width: 200px;
+  fill: var(--first-color);
+}
+.bg-image {
+  width: 170px;
+}
