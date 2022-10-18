@@ -1,7 +1,6 @@
 import cl from "./header.module.scss";
 import { HeaderIconsSVG } from "../../icons/header";
 import { useState } from "react";
-import classNames from "classnames";
 
 export default function Header() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -61,9 +60,9 @@ export default function Header() {
           <div className={cl.nav__buttons}>
             <div className={cl.nav__toggle} onClick={handleOpenNavbar}>
               {isNavbarOpen ? (
-                <HeaderIconsSVG id="toggle" />
-              ) : (
                 <HeaderIconsSVG id="close" />
+              ) : (
+                <HeaderIconsSVG id="toggle" />
               )}
             </div>
           </div>

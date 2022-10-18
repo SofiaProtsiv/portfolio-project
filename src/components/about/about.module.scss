@@ -68,7 +68,7 @@
   font-weight: var((--font-medium));
   margin-bottom: var(--mb-2);
   transition: 0.3s;
-}
-.download_link:hover {
-  background: var(--first-color-alt);
+  &:hover {
+    background: var(--first-color-alt);
+  }
 }

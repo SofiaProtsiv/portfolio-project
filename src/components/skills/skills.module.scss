@@ -36,9 +36,19 @@
   color: var(--text-color-light);
 }
 .content__list {
-  display: grid;
-  row-gap: 1rem;
-  padding-left: 2.7rem;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  &_open {
+    display: grid;
+    row-gap: 1rem;
+    height: max-content;
+    padding-left: 2.7rem;
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .content__item {
 }

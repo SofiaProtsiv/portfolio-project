@@ -1,0 +1,54 @@
+@import "../../index.scss";
+
+.section {
+  padding: 0;
+}
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+  gap: 3.5rem;
+}
+.section__bg {
+  padding-top: 2rem;
+  background-color: var(--first-color-second);
+  padding: 2rem 0 3rem;
+}
+.title {
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-0-25);
+  color: #fff;
+}
+.subtitle {
+  font-size: var(--small-font-size);
+  color: #fff;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin: var(--mb-3) 0;
+}
+.link {
+  color: #fff;
+  font-size: var(--normal-font-size);
+  &:hover {
+    color: var(--first-color-lighter);
+  }
+}
+.social {
+  display: flex;
+  column-gap: 2rem;
+}
+.social__link {
+  color: var(--first-color);
+}
+.social__link:hover {
+  color: var(--first-color-alt1);
+}
+.copyrights {
+  font-size: var(--small-font-size);
+  text-align: center;
+  color: var(--text-color-light);
+  margin-top: var(--mb-3);
+}

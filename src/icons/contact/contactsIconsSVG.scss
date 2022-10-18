@@ -1,0 +1,10 @@
+.bi {
+  &-geo-alt,
+  &-telephone,
+  &-envelope {
+    width: 2rem;
+    height: 2rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+  }
+}

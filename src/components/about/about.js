@@ -1,6 +1,7 @@
 import cl from "./about.module.scss";
 import { AboutIconsSVG } from "../../icons/about";
 import CV from "../../assets/SOFIA_PROTSIV_CV.pdf";
+
 export default function About() {
   return (
     <section className={cl.section} id="about">
