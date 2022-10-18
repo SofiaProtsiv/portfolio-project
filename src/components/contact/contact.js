@@ -3,7 +3,7 @@ import { ContactsIconsSVG } from "../../icons/contact";
 
 export default function Contact() {
   return (
-    <section className={cl.section} id="portfolio">
+    <section className={cl.section} id="contact">
       <h2 className={cl.title}>You have a new project?</h2>
       <p className={cl.subtitle}>Get in touch</p>
       <div className={cl.container}>
@@ -72,8 +72,8 @@ export default function Contact() {
             <textarea name="" id="" cols="0" rows="5" className={cl.input} />
           </div>
           <div>
-            <a href="#" className={cl.submit__button}>
-              Send me
+            <a href="#contact" className={cl.submit__button}>
+              Send me <ContactsIconsSVG id="contact" />
             </a>
           </div>
         </form>

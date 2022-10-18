@@ -7,4 +7,9 @@
     color: var(--first-color);
     margin-right: var(--mb-0-75);
   }
+  &-send.contact {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #fff;
+  }
 }

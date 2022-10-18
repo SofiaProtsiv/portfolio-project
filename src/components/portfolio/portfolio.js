@@ -1,5 +1,7 @@
 import cl from "./portfolio.module.scss";
 import img from "../../icons/img.png";
+import { PortfolioIconsSVG } from "../../icons/portfolio";
+
 export default function Portfolio() {
   return (
     <section className={cl.section} id="portfolio">
@@ -14,7 +16,7 @@ export default function Portfolio() {
               Website adaptive to all devices and lorem
             </p>
             <a href="" className={cl.content__button}>
-              Demo
+              Demo <PortfolioIconsSVG id="arrow-right" />
             </a>
           </div>
         </div>
@@ -26,7 +28,7 @@ export default function Portfolio() {
               Website adaptive to all devices and lorem
             </p>
             <a href="" className={cl.content__button}>
-              Demo
+              Demo <PortfolioIconsSVG id="arrow-right" />
             </a>
           </div>
         </div>
@@ -38,7 +40,7 @@ export default function Portfolio() {
               Website adaptive to all devices and lorem
             </p>
             <a href="" className={cl.content__button}>
-              Demo
+              Demo <PortfolioIconsSVG id="arrow-right" />
             </a>
           </div>
         </div>
