@@ -1,9 +1,12 @@
 import cl from "./home.module.scss";
 import { HomeIconsSVG } from "../../icons/home";
+import { useStateContext } from "../../context";
 
 export default function Home() {
+  const { scrollToTop, scrollToAboutSection, scrollToContactSection } =
+    useStateContext();
   return (
-    <section className={cl.section} id="home">
+    <section className={cl.section} id="home" ref={scrollToTop}>
       <div className={cl.container}>
         <div className={cl.wrapper}>
           <div className={cl.social}>
@@ -42,17 +45,33 @@ export default function Home() {
               Hight level experience in web design and knowlage, productive
               quality work.
             </p>
-            <a className={cl.content__button} href="#contact">
+            <button
+              className={cl.content__button}
+              onClick={() =>
+                scrollToContactSection?.current?.scrollIntoView({
+                  block: "start",
+                  behavior: "smooth",
+                })
+              }
+            >
               Contact Me <HomeIconsSVG id="contact" />
-            </a>
+            </button>
           </div>
         </div>
         <div className={cl.scroll}>
-          <a href="#about" className={cl.scroll__button}>
+          <button
+            onClick={() =>
+              scrollToAboutSection?.current?.scrollIntoView({
+                block: "start",
+                behavior: "smooth",
+              })
+            }
+            className={cl.scroll__button}
+          >
             <HomeIconsSVG id="mouse" />
             <span className={cl.scroll__text}>Scroll down</span>
             <HomeIconsSVG id="down-arrow" />
-          </a>
+          </button>
         </div>
       </div>
     </section>

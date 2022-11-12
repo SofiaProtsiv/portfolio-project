@@ -1,12 +1,26 @@
+@import "../../index.scss";
+@import "../../assets/mixins.scss";
+
 .section {
   padding: 2rem 0 4rem;
+  @include onTablet {
+    padding: 6rem 1rem 2rem;
+  }
 }
 .container {
   display: grid;
   max-width: 768px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
-  row-gap: 2rem;
+  gap: 2rem;
+  @include onMediumTablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include onTablet {
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .title {
   text-align: center;
@@ -18,6 +32,9 @@
   text-align: center;
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-3);
+  @include onTablet {
+    margin-bottom: 4rem;
+  }
 }
 
 .content {
@@ -29,7 +46,10 @@
   cursor: pointer;
 }
 .content__title {
-  font-size: var(--h3-font-size);
+  font-size: var(--normal-font-size);
+  @include onMediumTablet {
+    font-size: var(--h3-font-size);
+  }
 }
 .content__subtitle {
   font-size: var(--small-font-size);

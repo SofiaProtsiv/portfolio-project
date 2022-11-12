@@ -1,6 +1,7 @@
 @import "../../index.scss";
+@import "../../assets/mixins.scss";
 
-.icon.bi {
+.qualification.bi {
   &-study,
   &-calendar-week {
     margin-right: var(--mb-0-25);

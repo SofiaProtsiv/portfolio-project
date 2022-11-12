@@ -1,30 +1,40 @@
 import cl from "./skills.module.scss";
 import { SkillsIconsSVG } from "../../icons/skills";
+import { useEffect, useState } from "react";
 import classNames from "classnames";
-import { useState } from "react";
+import { useStateContext } from "../../context";
 
 export default function Skills() {
+  const { scrollToSkillsSection } = useStateContext();
+
   const [isOpenDropdownList, setIsOpenDropdownList] = useState(false);
-  const handleOpenDropdownList = () => {
+  const [selectedSkill, setSelectedSkill] = useState("");
+
+  const handleSelectSkill = (event) => {
     setIsOpenDropdownList(!isOpenDropdownList);
+    setSelectedSkill(event.currentTarget.id);
   };
+
+  const condition1 = selectedSkill === "frontend" && isOpenDropdownList;
+  const condition2 = selectedSkill === "backend" && isOpenDropdownList;
+
   return (
-    <section className={cl.section} id="skills">
+    <section className={cl.section} id="skills" ref={scrollToSkillsSection}>
       <h2 className={cl.title}>Skills</h2>
       <span className={cl.subtitle}>My technical level</span>
       <div className={cl.container}>
-        <div className={cl.content} onClick={handleOpenDropdownList}>
+        <div className={cl.content} id="frontend" onClick={handleSelectSkill}>
           <div className={cl.content__header}>
             <SkillsIconsSVG id="frontend" />
             <div>
               <h1 className={cl.content__title}>Frontend developer</h1>
               <span className={cl.content__subtitle}>More than 1 year</span>
             </div>
-            <SkillsIconsSVG id="chevron-down" condition={isOpenDropdownList} />
+            <SkillsIconsSVG id="chevron-down" condition={condition1} />
           </div>
           <ul
             className={`${cl.content__list} ${
-              isOpenDropdownList && cl.content__list_open
+              condition1 && cl.content__list_open
             }`}
           >
             <li className={cl.content__item}>
@@ -74,18 +84,18 @@ export default function Skills() {
           </ul>
         </div>
 
-        <div className={cl.content}>
-          <div className={cl.content__header} onClick={handleOpenDropdownList}>
+        <div className={cl.content} id="backend" onClick={handleSelectSkill}>
+          <div className={cl.content__header}>
             <SkillsIconsSVG id="backend" />
             <div>
               <h1 className={cl.content__title}>Backend developer</h1>
               <span className={cl.content__subtitle}>More than 1 year</span>
             </div>
-            <SkillsIconsSVG id="chevron-down" condition={isOpenDropdownList} />
+            <SkillsIconsSVG id="chevron-down" condition={condition2} />
           </div>
           <ul
             className={`${cl.content__list} ${
-              isOpenDropdownList && cl.content__list_open
+              condition2 && cl.content__list_open
             }`}
           >
             <li className={cl.content__item}>

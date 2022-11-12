@@ -1,7 +1,17 @@
 @import "../../index.scss";
+@import "../../assets/mixins.scss";
 
 .section {
   padding: 2rem 0 4rem;
+
+  @include onMediumTablet {
+    display: grid;
+    grid-template-columns: 0.6fr;
+    justify-content: center;
+  }
+  @include onTablet {
+    padding: 6rem 1rem 2rem;
+  }
 }
 .container {
   display: grid;
@@ -9,6 +19,12 @@
   max-width: 768px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
+  justify-content: center;
+  @include onTablet {
+    max-width: initial;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .title {
   text-align: center;
@@ -20,12 +36,22 @@
   text-align: center;
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-3);
+  @include onTablet {
+    margin-bottom: 4rem;
+  }
 }
 .tabs {
   display: flex;
   justify-content: center;
-  justify-content: space-evenly;
+  gap: 1rem;
   margin-bottom: var(--mb-2);
+  @include onMediumTablet {
+    gap: 0;
+    justify-content: space-evenly;
+  }
+  @include onTablet {
+    justify-content: center;
+  }
 }
 .tab__button {
   display: flex;
@@ -38,13 +64,19 @@
   &.active {
     color: var(--first-color);
   }
+  @include onTablet {
+    margin: 0 var(--mb-1);
+  }
 }
 .content__sections {
 }
 .content {
   display: grid;
-  column-gap: 1.5rem;
+  column-gap: 0.5rem;
   grid-template-columns: 1fr max-content 1fr;
+  @include onMediumTablet {
+    column-gap: 1.5rem;
+  }
 }
 .content__title {
   font-size: var(--normal-font-size);

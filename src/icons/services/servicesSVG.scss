@@ -1,6 +1,7 @@
 @import "../../index.scss";
+@import "../../assets/mixins.scss";
 
-.bi {
+.services.bi {
   &-columns,
   &-code-square,
   &-kanban {
@@ -10,7 +11,7 @@
     fill: var(--first-color);
     margin-bottom: var(--mb-1);
   }
-  &-x-lg.icon {
+  &-x-lg {
     width: 1.25rem;
     height: 1.25rem;
     fill: var(--first-color);

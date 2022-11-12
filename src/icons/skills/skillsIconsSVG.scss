@@ -1,6 +1,7 @@
 @import "../../index.scss";
+@import "../../assets/mixins.scss";
 
-.bi {
+.skills.bi {
   &-server,
   &-braces {
     width: 2rem;

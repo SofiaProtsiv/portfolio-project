@@ -7,8 +7,8 @@ export default function NavBarMobile() {
 
   const handleOnSelectOption = (event) => {
     setSelectedOption(event.currentTarget.id);
-    console.log(selectedOption);
   };
+
   return (
     <div className={cl.mobileNavContainer}>
       <ul className={cl.list}>

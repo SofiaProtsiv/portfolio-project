@@ -10,7 +10,7 @@ export const ServicesIconsSVG = ({ id }) => {
           width="16"
           height="16"
           fill="currentColor"
-          className="bi bi-columns"
+          className="bi services bi-columns"
           viewBox="0 0 16 16"
         >
           <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V2zm8.5 0v8H15V2H8.5zm0 9v3H15v-3H8.5zm-1-9H1v3h6.5V2zM1 14h6.5V6H1v8z" />
@@ -23,7 +23,7 @@ export const ServicesIconsSVG = ({ id }) => {
           width="16"
           height="16"
           fill="currentColor"
-          className="bi bi-arrow-right"
+          className="bi services bi-arrow-right"
           viewBox="0 0 16 16"
         >
           <path
@@ -39,7 +39,7 @@ export const ServicesIconsSVG = ({ id }) => {
           width="16"
           height="16"
           fill="currentColor"
-          className="icon bi bi-x-lg"
+          className="bi services bi-x-lg"
           viewBox="0 0 16 16"
         >
           <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
@@ -52,7 +52,7 @@ export const ServicesIconsSVG = ({ id }) => {
           width="16"
           height="16"
           fill="currentColor"
-          className="bi bi-check-circle"
+          className="bi services bi-check-circle"
           viewBox="0 0 16 16"
         >
           <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -66,7 +66,7 @@ export const ServicesIconsSVG = ({ id }) => {
           width="16"
           height="16"
           fill="currentColor"
-          className="bi bi-code-square"
+          className="bi services bi-code-square"
           viewBox="0 0 16 16"
         >
           <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
@@ -80,7 +80,7 @@ export const ServicesIconsSVG = ({ id }) => {
           width="16"
           height="16"
           fill="currentColor"
-          className="bi bi-kanban"
+          className="bi services bi-kanban"
           viewBox="0 0 16 16"
         >
           <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z" />

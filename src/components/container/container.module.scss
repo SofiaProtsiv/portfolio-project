@@ -1,6 +1,5 @@
-@import "../../global-styles/mixins.scss";
-@import "../../global-styles/fonts.scss";
-@import "../../global-styles/colors.scss";
+@import "../../index.scss";
+@import "../../assets/mixins.scss";
 
 .content_wr {
   position: relative;
@@ -12,7 +11,7 @@
     min-width: $mobile-width;
     padding: 0 50px;
   }
-  @include onTablet {
+  @include onMediumTablet {
     width: $tablet-width;
     padding: 0 75px;
   }
@@ -29,7 +28,7 @@
 .container {
   padding: 30px 0;
 
-  @include onTablet {
+  @include onMediumTablet {
     padding: 50px 0;
   }
 }

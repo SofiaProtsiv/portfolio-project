@@ -1,18 +1,32 @@
 @import "../../index.scss";
+@import "../../assets/mixins.scss";
 
 .section {
   padding: 0;
 }
 .container {
-  max-width: 768px;
+  display: grid;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
   gap: 3.5rem;
+  @include onMediumTablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include onTablet {
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 2rem;
+    align-items: baseline;
+  }
 }
 .section__bg {
   padding-top: 2rem;
   background-color: var(--first-color-second);
   padding: 2rem 0 3rem;
+  @include onTablet {
+    padding: 3rem 0 3.5rem;
+  }
 }
 .title {
   font-size: var(--h1-font-size);
@@ -26,11 +40,17 @@
 .links {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
-  margin: var(--mb-3) 0;
+  gap: 1rem;
+  @include onTablet {
+    flex-direction: row;
+    column-gap: 2rem;
+  }
 }
 .link {
+  border: none;
+  background-color: transparent;
   color: #fff;
+  cursor: pointer;
   font-size: var(--normal-font-size);
   &:hover {
     color: var(--first-color-lighter);
@@ -39,6 +59,9 @@
 .social {
   display: flex;
   column-gap: 2rem;
+  @include onTablet {
+    justify-self: flex-end;
+  }
 }
 .social__link {
   color: var(--first-color);
@@ -51,4 +74,7 @@
   text-align: center;
   color: var(--text-color-light);
   margin-top: var(--mb-3);
+  @include onTablet {
+    margin-top: 4.5rem;
+  }
 }

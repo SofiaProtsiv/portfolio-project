@@ -1,13 +1,12 @@
+@import "../../index.scss";
+@import "../../assets/mixins.scss";
+
 .section {
   padding: 2rem 0 4rem;
-}
-.container {
-  display: grid;
-  gap: 1.5rem;
-  max-width: 768px;
-  margin-left: var(--mb-1-5);
-  margin-right: var(--mb-1-5);
-  overflow: initial;
+  overflow: hidden;
+  @include onTablet {
+    padding: 6rem 1rem 2rem;
+  }
 }
 .title {
   text-align: center;
@@ -19,23 +18,41 @@
   text-align: center;
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-3);
+  @include onTablet {
+    margin-bottom: 4rem;
+  }
+}
+.container {
 }
 .content__wrapper {
   padding: 0 1.5rem;
 }
+.content_img_wrapper {
+  width: 100%;
+}
 .content__image {
-  width: 265px;
+  width: 100%;
+  height: 100%;
   border-radius: 0.5rem;
   justify-self: center;
+
+  @include onDesktop {
+    height: 250px;
+  }
+}
+.skeleton {
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
 }
 .content {
 }
 .content__title {
   font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-5);
+  margin: var(--mb-1) 0;
 }
 .content__description {
-  margin-bottom: var(--mb-0-75);
+  margin-bottom: var(--mb-1);
 }
 .content__button {
   display: inline-flex;

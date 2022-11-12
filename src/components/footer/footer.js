@@ -1,7 +1,14 @@
 import cl from "./footer.module.scss";
 import { FooterIconsSVG } from "../../icons/footer";
+import { useStateContext } from "../../context";
 
 export default function Footer() {
+  const {
+    scrollToAboutSection,
+    scrollToServicesSection,
+    scrollToPortfolioSection,
+    scrollToQualificationSection,
+  } = useStateContext();
   return (
     <footer className={cl.section} id="footer">
       <div className={cl.section__bg}>
@@ -12,24 +19,56 @@ export default function Footer() {
           </div>
           <ul className={cl.links}>
             <li>
-              <a className={cl.link} href="#about">
+              <button
+                className={cl.link}
+                onClick={() =>
+                  scrollToAboutSection?.current?.scrollIntoView({
+                    block: "start",
+                    behavior: "smooth",
+                  })
+                }
+              >
                 About
-              </a>
+              </button>
             </li>
             <li>
-              <a className={cl.link} href="#qualification">
+              <button
+                className={cl.link}
+                onClick={() =>
+                  scrollToQualificationSection?.current?.scrollIntoView({
+                    block: "start",
+                    behavior: "smooth",
+                  })
+                }
+              >
                 Qualification
-              </a>
+              </button>
             </li>
             <li>
-              <a className={cl.link} href="#services">
+              <button
+                className={cl.link}
+                onClick={() =>
+                  scrollToServicesSection?.current?.scrollIntoView({
+                    block: "start",
+                    behavior: "smooth",
+                  })
+                }
+              >
                 Services
-              </a>
+              </button>
             </li>
             <li>
-              <a className={cl.link} href="#portfolio">
+              <button
+                className={cl.link}
+                onClick={() =>
+                  scrollToPortfolioSection?.current?.scrollIntoView({
+                    block: "start",
+                    behavior: "smooth",
+                  })
+                }
+              >
                 Portfolio
-              </a>
+              </button>
             </li>
           </ul>
           <div className={cl.social}>

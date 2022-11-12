@@ -1,6 +1,7 @@
 @import "../../index.scss";
+@import "../../assets/mixins.scss";
 
-.bi {
+.home.bi {
   &-linkedin,
   &-github,
   &-instagram,
@@ -14,9 +15,19 @@
     height: 2rem;
   }
 }
-.bg-image__icon {
-  width: 200px;
+.home.bg-image__icon {
+  width: 180px;
   fill: var(--first-color);
+  z-index: 999;
+  @include onMobile {
+    width: 200px;
+  }
+  @include onMediumTablet {
+    width: 250px;
+  }
+  @include onTablet {
+    width: 320px;
+  }
 }
 .bg-image {
   width: 170px;

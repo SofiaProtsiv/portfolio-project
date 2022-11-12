@@ -1,15 +1,21 @@
 import cl from "./qualification.module.scss";
 import { QualificationIconsSVG } from "../../icons/qualification";
 import { useState } from "react";
+import { useStateContext } from "../../context";
 
 export default function Qualification() {
+  const { scrollToQualificationSection } = useStateContext();
   const [selectedOption, setSelectedOption] = useState("work");
   const handleChooseOption = (event) => {
     setSelectedOption(event.currentTarget.id);
   };
 
   return (
-    <section className={cl.section} id="qualification">
+    <section
+      className={cl.section}
+      id="qualification"
+      ref={scrollToQualificationSection}
+    >
       <h2 className={cl.title}>Qualification</h2>
       <span className={cl.subtitle}>My personal jorney</span>
       <div className={cl.container}>
